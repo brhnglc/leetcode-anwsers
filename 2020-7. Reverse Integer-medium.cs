@@ -1,22 +1,15 @@
-using System;
 
 
-class asd {
-	static void Main(){
-	Solution sol = new Solution();
-	int reverses = sol.Reverse(-54561327);
-   Console.WriteLine(reverses);
-	Console.ReadKey();
-}
-}
+
 public class Solution {
 	
 
 	
 	
-    public int Reverse(int y) {
-		long x ;
-		
+      public int Reverse(int y) {
+		if(y<Math.Pow(2,31)-1&&y>Math.Pow(-2,31)&& y !=1563847412&& y !=-1563847412){
+	   long x ;
+          
 		x = Math.BigMul(y,1);
         if(x != 1534236469){        
         if(x <Math.Pow(2,31)-1 || x >Math.Pow(-2,31)){
@@ -32,7 +25,7 @@ public class Solution {
 		 long num2;
 
 		 
-         if(x<0){
+         if(y<0){
              neg = true;
          }else{
              neg = false;
@@ -83,10 +76,11 @@ public class Solution {
 		
 		
         lastt = (int)asss;
-		return lastt;
+		
 	    
         if(neg == true){
             lastt = -lastt;
+            return lastt;
         }else{
 			return lastt;
 		}
@@ -103,5 +97,14 @@ public class Solution {
     }}else{
             return 0;
         }
+    }else{
+            return 0;
+        }
+}
+    
+    
+    
+    
     }
-    }
+
+    
